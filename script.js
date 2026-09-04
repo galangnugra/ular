@@ -100,7 +100,7 @@ function startGame() {
 
   gameRunning = true;
 
-  gameLoop = setInterval(updateGame, 110);
+  gameLoop = setInterval(updateGame, 160);
 }
 
 
