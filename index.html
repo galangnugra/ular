@@ -1,64 +1,63 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Snake Fruit</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Fruit</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="container">
-
     <!-- MENU AWAL -->
     <section id="startScreen" class="screen">
-      <h1>🐍 SNAKE FRUIT</h1>
-      <p>Makan buah sebanyak mungkin!</p>
+        <div class="card">
+            <h1>🐍 Snake Fruit</h1>
+            <p>Game Cacing Sederhana</p>
 
-      <input type="text" id="username" placeholder="Username" maxlength="20">
-      <input type="tel" id="whatsapp" placeholder="Nomor WhatsApp" maxlength="15">
+            <input type="text" id="username" placeholder="Masukkan username" maxlength="20">
+            <input type="tel" id="whatsapp" placeholder="Nomor WhatsApp" maxlength="15">
 
-      <button id="startBtn">MULAI BERMAIN</button>
-
-      <p id="errorMessage"></p>
+            <button id="startBtn">🎮 Mulai Bermain</button>
+            <button id="leaderboardBtn">🏆 Leaderboard</button>
+        </div>
     </section>
 
     <!-- GAME -->
     <section id="gameScreen" class="screen hidden">
-      <div class="game-info">
-        <span>👤 <b id="playerName"></b></span>
-        <span>⭐ Skor: <b id="score">0</b></span>
-      </div>
+        <div class="game-container">
+            <div class="top-bar">
+                <span>👤 <b id="playerName">Player</b></span>
+                <span>⭐ Score: <b id="score">0</b></span>
+            </div>
 
-      <canvas id="gameCanvas" width="400" height="400"></canvas>
+            <canvas id="gameCanvas" width="360" height="360"></canvas>
 
-      <div class="controls">
-        <button data-direction="up">⬆️</button>
+            <div class="controls">
+                <button data-direction="up">⬆️</button>
+                <div>
+                    <button data-direction="left">⬅️</button>
+                    <button data-direction="down">⬇️</button>
+                    <button data-direction="right">➡️</button>
+                </div>
+            </div>
 
-        <div>
-          <button data-direction="left">⬅️</button>
-          <button data-direction="down">⬇️</button>
-          <button data-direction="right">➡️</button>
+            <button id="restartBtn">🔄 Main Lagi</button>
+            <button id="backBtn">🏠 Menu Utama</button>
         </div>
-      </div>
-
-      <button id="restartBtn">🔄 Main Lagi</button>
-      <button id="leaderboardBtn">🏆 Leaderboard</button>
     </section>
 
     <!-- LEADERBOARD -->
     <section id="leaderboardScreen" class="screen hidden">
-      <h2>🏆 LEADERBOARD</h2>
+        <div class="card leaderboard-card">
+            <h1>🏆 Leaderboard</h1>
 
-      <div id="leaderboardList">
-        <p>Memuat data...</p>
-      </div>
+            <div id="leaderboardList"></div>
 
-      <button id="backBtn">⬅️ Kembali</button>
+            <button id="backLeaderboardBtn">🏠 Kembali</button>
+            <button id="clearDataBtn" class="danger">🗑️ Hapus Data</button>
+        </div>
     </section>
 
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
